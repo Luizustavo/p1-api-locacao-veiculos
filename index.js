@@ -7,12 +7,10 @@ require("dotenv").config();
 
 const PORT =  3000;
 
-app.use(cors()); // Permite todas as origens; ajuste conforme necessário
+app.use(cors()); 
 
-// Middleware para interpretar JSON
 app.use(express.json());
 
-// Crie o pool de conexão com o banco de dados Azure MySQL
 const pool = mysql.createPool({
   host: "servermysqlcn1.mysql.database.azure.com",
   user: "userdb",
